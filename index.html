@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>ABAP DevOps: Introduction</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h2>SCM in ABAP</h2>
+					<ul>
+						<li>gCTS</li>
+						<li>abapGit</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>gCTS -Git enabled CTS</h2>
+					<ul>
+						<li>transports to commits</li>
+						<li>random set of objects</li>
+						<li>support for almost all object types</li>
+						<li>machine format serialization</li>
+						<li>kinda fast operations</li>
+						<li>switching branches works nice</li>
+						<li>fails to deal with rewritten history</li>
+						<li>remote API available</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>abapGit</h2>
+					<ul>
+						<li>ABAP package to git repo mapping (git native)</li>
+						<li>support only for subset of objects types</li>
+						<li>human readable format</li>
+						<li>switching branches somehow fragile</li>
+						<li>does not handle big packages very well</li>
+						<li>mainly focused on human interaction</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>gCTS vs. abapGit</h2>
+					<ul>
+						<li>integrate vs. innovate</li>
+						<li>transparent vs. explicit</li>
+						<li>complicated vs. simple</li>
+						<li>comprehensive vs. minimalistic</li>
+						<li>enterprise support vs. community support</li>
+						<li>complete livecycle vs. mainly backup</li>
+						<li>limited availability vs. works on &gt;7.04<li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Branching variants</h2>
+					<ul>
+						<li>standard git options</li>
+						<li>does not depend on tool</li>
+						<li>feature branch or cherry-picking</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Private development systems</h2>
+					<ul>
+						<li>creating a snapshot is simple</li>
+						<li>dealing with hostname changes is not</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Continuous Integration</h2>
+					<ul>
+						<li>Jenkins, GitHub Actions, Travis, MS Azure, ...</li>
+						<li>easier to start a docker container than provision a new VM</li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
